@@ -2,7 +2,7 @@
 
 namespace unit;
 
-use Luchki\Confirmation\CodeConfirmationArrayRepository;
+use Luchki\ConfirmationArrayRepository;
 use Luchki\Confirmation\Confirmer;
 use Luchki\Confirmation\DummyConfirmationSubscriber;
 use Luchki\Confirmation\Contracts\ICodeConfirmationRepository;
