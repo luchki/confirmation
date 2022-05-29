@@ -1,11 +1,11 @@
 <?php
 
-namespace App\CodeConfirmation;
+namespace Luchki\Confirmation\CodeConfirmation;
 
-use App\CodeConfirmation\contracts\ICodeConfirmation;
-use App\CodeConfirmation\contracts\ICodeConfirmationRepository;
-use App\CodeConfirmation\contracts\ICodeGenerator;
-use App\CodeConfirmation\contracts\IConfirmationSubscriber;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmation;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeGenerator;
+use Luchki\Confirmation\CodeConfirmation\contracts\IConfirmationSubscriber;
 
 class Confirmer
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\CodeConfirmation\contracts;
+namespace Luchki\Confirmation\CodeConfirmation\contracts;
 
 interface ICodeConfirmationRepository
 {

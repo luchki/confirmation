@@ -1,8 +1,8 @@
 <?php
 
-namespace App\CodeConfirmation;
+namespace Luchki\Confirmation\CodeConfirmation;
 
-use App\CodeConfirmation\contracts\ICodeGenerator;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeGenerator;
 
 class NumberCodeGenerator implements ICodeGenerator
 {

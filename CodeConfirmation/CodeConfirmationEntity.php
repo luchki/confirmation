@@ -1,8 +1,8 @@
 <?php
 
-namespace App\CodeConfirmation;
+namespace Luchki\Confirmation\CodeConfirmation;
 
-use App\CodeConfirmation\contracts\ICodeConfirmation;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmation;
 
 class CodeConfirmationEntity implements ICodeConfirmation
 {

@@ -2,10 +2,10 @@
 
 namespace unit;
 
-use App\CodeConfirmation\CodeConfirmationArrayRepository;
-use App\CodeConfirmation\Confirmer;
-use App\CodeConfirmation\DummyConfirmationSubscriber;
-use App\CodeConfirmation\contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\CodeConfirmation\CodeConfirmationArrayRepository;
+use Luchki\Confirmation\CodeConfirmation\Confirmer;
+use Luchki\Confirmation\CodeConfirmation\DummyConfirmationSubscriber;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmationRepository;
 use Codeception\Test\Unit;
 
 class ConfirmerTest extends Unit

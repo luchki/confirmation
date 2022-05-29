@@ -1,9 +1,9 @@
 <?php
 
-namespace App\CodeConfirmation;
+namespace Luchki\Confirmation\CodeConfirmation;
 
-use App\CodeConfirmation\contracts\ICodeConfirmation;
-use App\CodeConfirmation\contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmation;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmationRepository;
 
 class CodeConfirmationArrayRepository implements ICodeConfirmationRepository
 {

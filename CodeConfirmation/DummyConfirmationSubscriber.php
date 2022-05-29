@@ -1,9 +1,9 @@
 <?php
 
-namespace App\CodeConfirmation;
+namespace Luchki\Confirmation\CodeConfirmation;
 
-use App\CodeConfirmation\contracts\ICodeConfirmation;
-use App\CodeConfirmation\contracts\IConfirmationSubscriber;
+use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmation;
+use Luchki\Confirmation\CodeConfirmation\contracts\IConfirmationSubscriber;
 
 class DummyConfirmationSubscriber implements IConfirmationSubscriber
 {
