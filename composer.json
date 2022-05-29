@@ -2,7 +2,7 @@
   "name": "luchki/confirmation",
   "description": "code confirmation module for authentication",
   "minimum-stability": "stable",
-  "prefer-stable" : true,
+  "prefer-stable": true,
   "license": "proprietary",
   "authors": [
     {
@@ -11,6 +11,11 @@
     }
   ],
   "autoload": {
-        "psr-4": { "Luchki\\Confirmation\\": "CodeConfirmation/"}
+    "psr-4": {
+      "Luchki\\Confirmation\\": "CodeConfirmation/"
     }
+  },
+  "require": {
+    "php": ">=7.2"
+  }
 }
