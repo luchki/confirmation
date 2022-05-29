@@ -2,10 +2,10 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmation;
-use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmationRepository;
-use Luchki\Confirmation\CodeConfirmation\contracts\ICodeGenerator;
-use Luchki\Confirmation\CodeConfirmation\contracts\IConfirmationSubscriber;
+use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmation;
+use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeGenerator;
+use Luchki\Confirmation\CodeConfirmation\Contracts\IConfirmationSubscriber;
 
 class Confirmer
 {

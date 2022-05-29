@@ -2,7 +2,7 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\contracts\ICodeGenerator;
+use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeGenerator;
 
 class NumberCodeGenerator implements ICodeGenerator
 {

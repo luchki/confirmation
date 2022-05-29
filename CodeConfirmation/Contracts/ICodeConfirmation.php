@@ -1,6 +1,6 @@
 <?php
 
-namespace Luchki\Confirmation\CodeConfirmation\contracts;
+namespace Luchki\Confirmation\CodeConfirmation\Contracts;
 
 interface ICodeConfirmation
 {

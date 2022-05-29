@@ -2,7 +2,7 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmation;
+use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmation;
 
 class CodeConfirmationEntity implements ICodeConfirmation
 {

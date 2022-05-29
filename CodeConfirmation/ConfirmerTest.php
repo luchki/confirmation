@@ -5,7 +5,7 @@ namespace unit;
 use Luchki\Confirmation\CodeConfirmation\CodeConfirmationArrayRepository;
 use Luchki\Confirmation\CodeConfirmation\Confirmer;
 use Luchki\Confirmation\CodeConfirmation\DummyConfirmationSubscriber;
-use Luchki\Confirmation\CodeConfirmation\contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmationRepository;
 use Codeception\Test\Unit;
 
 class ConfirmerTest extends Unit
