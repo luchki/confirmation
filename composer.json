@@ -2,6 +2,7 @@
   "name": "luchki/confirmation",
   "description": "code confirmation module for authentication",
   "minimum-stability": "stable",
+  "prefer-stable" : true,
   "license": "proprietary",
   "authors": [
     {
