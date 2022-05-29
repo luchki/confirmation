@@ -9,9 +9,6 @@
       "email": "zinguru@gmail.com"
     }
   ],
-  "require-dev": {
-        "codeception/codeception": "^4.1"
-  },
   "autoload": {
         "psr-4": { "Luchki\\Confirmation\\": "CodeConfirmation/"}
     }
