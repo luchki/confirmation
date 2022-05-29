@@ -2,8 +2,8 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmation;
-use Luchki\Confirmation\CodeConfirmation\Contracts\IConfirmationSubscriber;
+use Luchki\Confirmation\Contracts\ICodeConfirmation;
+use Luchki\Confirmation\Contracts\IConfirmationSubscriber;
 
 class DummyConfirmationSubscriber implements IConfirmationSubscriber
 {

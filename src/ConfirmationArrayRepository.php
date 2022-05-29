@@ -2,10 +2,10 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmation;
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\Contracts\ICodeConfirmation;
+use Luchki\Confirmation\Contracts\ICodeConfirmationRepository;
 
-class CodeConfirmationArrayRepository implements ICodeConfirmationRepository
+class ConfirmationArrayRepository implements ICodeConfirmationRepository
 {
         /** @var ICodeConfirmation[] */
         private $confirmations = [];

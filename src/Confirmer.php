@@ -2,10 +2,10 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmation;
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmationRepository;
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeGenerator;
-use Luchki\Confirmation\CodeConfirmation\Contracts\IConfirmationSubscriber;
+use Luchki\Confirmation\Contracts\ICodeConfirmation;
+use Luchki\Confirmation\Contracts\ICodeConfirmationRepository;
+use Luchki\Confirmation\Contracts\ICodeGenerator;
+use Luchki\Confirmation\Contracts\IConfirmationSubscriber;
 
 class Confirmer
 {
@@ -72,10 +72,10 @@ class Confirmer
 
         /**
          * @param string $identity
-         * @return CodeConfirmationEntity
+         * @return ConfirmationEntity
          */
-        private function makeNewConfirmation(string $identity): CodeConfirmationEntity {
-                $confirmation = (new CodeConfirmationEntity(
+        private function makeNewConfirmation(string $identity): ConfirmationEntity {
+                $confirmation = (new ConfirmationEntity(
                         $identity,
                         $this->generateCode(),
                         $this->makeExpireTimestamp()

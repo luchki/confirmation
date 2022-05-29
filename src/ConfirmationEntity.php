@@ -2,9 +2,9 @@
 
 namespace Luchki\Confirmation\CodeConfirmation;
 
-use Luchki\Confirmation\CodeConfirmation\Contracts\ICodeConfirmation;
+use Luchki\Confirmation\Contracts\ICodeConfirmation;
 
-class CodeConfirmationEntity implements ICodeConfirmation
+class ConfirmationEntity implements ICodeConfirmation
 {
         /** @var string */
         private $identity;
