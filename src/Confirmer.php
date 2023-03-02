@@ -5,32 +5,19 @@ namespace Luchki\Confirmation;
 use Luchki\Confirmation\Contracts\ICodeConfirmation;
 use Luchki\Confirmation\Contracts\ICodeConfirmationRepository;
 use Luchki\Confirmation\Contracts\ICodeGenerator;
-use Luchki\Confirmation\Contracts\IConfirmationSubscriber;
 
 class Confirmer
 {
-        /** @var ICodeConfirmationRepository */
-        private $confirmation_repository;
-        /** @var int */
-        private $expire_timeout_seconds = 300;
-        /** @var ICodeGenerator */
-        private $code_generator;
-        /** @var IConfirmationSubscriber[] */
-        private $subscribers;
-
         /**
          * @param ICodeConfirmationRepository $confirmation_repository
-         * @param IConfirmationSubscriber[]   $subscribers
-         * @param ICodeGenerator|null         $code_generator
+         * @param ICodeGenerator              $code_generator
+         * @param int                         $expire_timeout_seconds
          */
         public function __construct(
-                ICodeConfirmationRepository $confirmation_repository,
-                array                       $subscribers = [],
-                ?ICodeGenerator             $code_generator = null
+                private readonly ICodeConfirmationRepository $confirmation_repository,
+                private readonly ICodeGenerator              $code_generator = new NumberCodeGenerator(),
+                private readonly int                         $expire_timeout_seconds = 300
         ) {
-                $this->confirmation_repository = $confirmation_repository;
-                $this->code_generator = $code_generator ?? new NumberCodeGenerator();
-                $this->subscribers = $subscribers;
         }
 
         public function getConfirmationCode(string $identity): string {
@@ -62,7 +49,7 @@ class Confirmer
                 $this->confirmation_repository->saveConfirmation($confirmation);
         }
 
-        private function confirmationExists(string $identity):bool {
+        private function confirmationExists(string $identity): bool {
                 return $this->confirmation_repository->getConfirmation($identity) !== null;
         }
 
@@ -81,7 +68,7 @@ class Confirmer
                         $this->makeExpireTimestamp()
                 ));
                 $this->saveConfirmation($confirmation);
-                $this->notifySubscribers($confirmation);
+
                 return $confirmation;
         }
 
@@ -90,12 +77,6 @@ class Confirmer
                 if ($confirmation !== null) {
                         $confirmation->setIsExpired();
                         $this->saveConfirmation($confirmation);
-                }
-        }
-
-        private function notifySubscribers(ICodeConfirmation $confirmation): void {
-                foreach ($this->subscribers as $subscriber) {
-                        $subscriber->notify($confirmation);
                 }
         }
 
