@@ -8,25 +8,16 @@ use Luchki\Confirmation\Contracts\ICodeGenerator;
 
 class Confirmer
 {
-        /** @var ICodeConfirmationRepository */
-        private $confirmation_repository;
-        /** @var int */
-        private $expire_timeout_seconds;
-        /** @var ICodeGenerator */
-        private $code_generator;
-
         /**
          * @param ICodeConfirmationRepository $confirmation_repository
-         * @param ICodeGenerator|null         $code_generator
+         * @param ICodeGenerator              $code_generator
+         * @param int                         $expire_timeout_seconds
          */
         public function __construct(
-                ICodeConfirmationRepository $confirmation_repository,
-                ?ICodeGenerator             $code_generator = null,
-                int                         $expire_timeout_seconds = 300
+                private readonly ICodeConfirmationRepository $confirmation_repository,
+                private readonly ICodeGenerator              $code_generator = new NumberCodeGenerator(),
+                private readonly int                         $expire_timeout_seconds = 300
         ) {
-                $this->expire_timeout_seconds = $expire_timeout_seconds;
-                $this->confirmation_repository = $confirmation_repository;
-                $this->code_generator = $code_generator ?? new NumberCodeGenerator();
         }
 
         public function getConfirmationCode(string $identity): string {
